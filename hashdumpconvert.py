@@ -3,6 +3,7 @@
 #Free to use, too simple to care
 #Please name input file as 'input.txt'
 #Outputted file is called 'output.txt'
+#When used with hashcat be sure to include '--username'
 
 def filter(inputstr): #Used to get rid of the middle stuff
 
