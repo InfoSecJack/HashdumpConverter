@@ -1,25 +1,26 @@
-#Python hashdump converter
+#Python hashdump converter V1
+#By Jack Alston
 #Free to use, too simple to care
 #Please name input file as 'input.txt'
 #Outputted file is called 'output.txt'
 
-def filter(inputstr): #used to get rid of the middle stuff
+def filter(inputstr): #Used to get rid of the middle stuff
 
     subreturn = ""  
 
-    #gets the substring before the first ':' which is usually the username
+    #Gets the substring before the first ':' which is usually the username
     subreturn += inputstr[:inputstr.index(":")] 
 
-    #gotta have that ':'
+    #Gotta have that ':'
     subreturn += ":"
 
-    #reverses the string, gets the first ':', splits it, and then reverses it
+    #Reverses the string, gets the first ':', splits it, and then reverses it
     subreturn += inputstr[::-1][:inputstr[::-1].index(":")][::-1]
 
     return subreturn
 
 
-def openFile():
+def openFile(): #Used to open the input file for iteration
 
     with open("input.txt") as f:
 
@@ -34,6 +35,6 @@ def main():
 
             f.write(filter(x))
 
-if __name__ == "__main__":
+if __name__ == "__main__": #More of a habit now, purely optional
     
     main()
