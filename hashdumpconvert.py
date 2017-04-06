@@ -1,8 +1,6 @@
 #Python hashdump converter V1.3
 #By Jack Alston
 #Free to use, too simple to care
-#Please name input file as 'input.txt'
-#Outputted file is called 'output.txt'
 #When used with hashcat be sure to include '--username'
 
 #This is shown when the user does "-h"
