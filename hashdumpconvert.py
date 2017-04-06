@@ -49,17 +49,12 @@ def filterstr(inputstr): #Used to get rid of the middle stuff
 
     inputstr = inputstr.strip(":")
 
-    subreturn = "".join(
-        (
-        #Gets the substring before the first ':' which is usually the username
+    substring = "{}:{}".format(
         inputstr[:inputstr.index(":")],
-        #Gotta have that ':'
-        ":",
-        #Reverses the string, and then repeats what the first one does
-        inputstr[::-1][:inputstr[::-1].index(":")][::-1])
+        inputstr[inputstr.rindex(":"):]
         )
     
-    return subreturn
+    return substring
 
 
 def openFile(): #Used to open the input file for iteration
