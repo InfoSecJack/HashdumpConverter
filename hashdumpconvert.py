@@ -45,7 +45,9 @@ def checkargs():
 
     return filename, outfilename
 
-def filter(inputstr): #Used to get rid of the middle stuff
+def filterstr(inputstr): #Used to get rid of the middle stuff
+
+    inputstr = inputstr.strip(":")
 
     subreturn = "".join(
         (
@@ -73,7 +75,7 @@ def main():
 
         for x in openFile():
 
-            f.write(filter(x))
+            f.write(filterstr(x))
 
 if __name__ == "__main__": #More of a habit now, purely optional
 
