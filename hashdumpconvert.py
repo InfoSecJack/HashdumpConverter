@@ -39,7 +39,7 @@ def checkargs():
         filename = "input.txt"
 
     if "-o" in sys.argv:
-        outfilename = sys.argv[sys.argv.index("-i") + 1]
+        outfilename = sys.argv[sys.argv.index("-o") + 1]
     else:
         outfilename = "output.txt"
 
