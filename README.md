@@ -10,11 +10,11 @@ Usage:
   
   hashdumpconvert.py -h
   
-  hashdumpconvert.py -i <input file>
+  hashdumpconvert.py -i 'input file'
   
-  hashdumpconvert.py -i <input file> -o <output file>
+  hashdumpconvert.py -i 'input file' -o 'output file'
   
-  hashdumpconvert.py -o <output file>
+  hashdumpconvert.py -o 'output file'
   
   hashdumpconvert.py --version
   
