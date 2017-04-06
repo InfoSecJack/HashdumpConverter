@@ -43,6 +43,7 @@ def checkargs():
     else:
         outfilename = "output.txt"
 
+    return filename, outfilename
 
 def filter(inputstr): #Used to get rid of the middle stuff
 
@@ -76,6 +77,6 @@ def main():
 
 if __name__ == "__main__": #More of a habit now, purely optional
 
-    checkargs()
+    filename, outfilename = checkargs()
         
     main()
