@@ -2,6 +2,7 @@ Python Hashdump Converter
 
 
 Python Script to convert hashdump's from metasploit into hashcat and (sort of) human readable
+
 Usage:
 
 
