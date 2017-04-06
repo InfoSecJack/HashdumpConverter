@@ -46,14 +46,13 @@ def checkargs():
     return filename, outfilename
 
 def filterstr(inputstr): #Used to get rid of the middle stuff
-
+    
+    inputstr = inputstr.strip("\n")
     inputstr = inputstr.strip(":")
-
-    substring = "{}:{}".format(
+    substring = "{}{}\n".format(
         inputstr[:inputstr.index(":")],
         inputstr[inputstr.rindex(":"):]
         )
-    
     return substring
 
 
@@ -64,16 +63,13 @@ def openFile(): #Used to open the input file for iteration
         return f.readlines()
 
 
-def main():
+if __name__ == "__main__": #More of a habit now, purely optional
 
+    filename, outfilename = checkargs()
+    
     with open(outfilename, "w") as f:
 
         for x in openFile():
 
             f.write(filterstr(x))
-
-if __name__ == "__main__": #More of a habit now, purely optional
-
-    filename, outfilename = checkargs()
         
-    main()
